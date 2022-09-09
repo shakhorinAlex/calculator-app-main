@@ -45,7 +45,6 @@ $(themeChangeBtn).on('change', themeChange);
 // theme change //
 
 // calculation //
-    
 
 let equationValue = '';
 
@@ -61,13 +60,28 @@ function evaluateResult() {
         let calcResult = eval(equationValue);
         result.value = calcResult;
         equationValue = calcResult;
+    };
+    if (equationValue === undefined) {
+        errorMessage.classList.add('active');
+        result.value = '';
+        equationValue = '';
+        timeChange();
     }
-    
 }
+
+// FOR later
+// function evaluateResultKeyboard(event) {
+//     let key = event.key;
+//     equationValue += key.toString();
+//     result.value = equationValue;
+//     console.log(key);
+// }
+// $(calcButtons).on('keydown', evaluateResultKeyboard);
 
 $(calcButtons).on('click', addValue);
 
 $(equalBtn).on('click', evaluateResult);
+
 
 // calculation //
 
@@ -98,7 +112,7 @@ window.onerror = function () {
     result.value = equationValue;
     errorMessage.classList.add('active');
 
-    setTimeout(() => {
+    setTimeout((timeChange) => {
         if (errorMessage.classList.contains('active')) {
             errorMessage.classList.remove('active');
         }
