@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="container-head">
+        <h1 class="container_header">calc</h1>
+        <div class="theme-change">
+          <p class="theme-text">theme</p>
+          <div class="theme-change_switch">
+            <div class="theme-change-option">
+              <p class="theme-change-option-text">1</p>
+              <p class="theme-change-option-text">2</p>
+            </div>
+            <input type="checkbox" id="theme-change-btn" />
+            <label for="theme-change-btn"></label>
+          </div>
+        </div>
+      </div>
+      <div class="calculator-result">
+        <input type="text" value="" class="input-result" readonly="readonly" />
+      </div>
+      <div class="calculator-input">
+        <button value="7" class="calculator-btn">7</button>
+        <button value="8" class="calculator-btn">8</button>
+        <button value="9" class="calculator-btn">9</button>
+        <button value="DEL" class="rst del">DEL</button>
+        <button value="4" class="calculator-btn">4</button>
+        <button value="5" class="calculator-btn">5</button>
+        <button value="6" class="calculator-btn">6</button>
+        <button value="+" class="calculator-btn calculator-operators">+</button>
+        <button value="1" class="calculator-btn">1</button>
+        <button value="2" class="calculator-btn">2</button>
+        <button value="3" class="calculator-btn">3</button>
+        <button value="-" class="calculator-btn calculator-operators">-</button>
+        <button value="." class="calculator-btn">.</button>
+        <button value="0" class="calculator-btn">0</button>
+        <button value="/" class="calculator-btn calculator-operators">/</button>
+        <button value="*" class="calculator-btn calculator-operators">x</button>
+        <button
+          type="reset"
+          value="RESET"
+          class="rst grid2span reset"
+          id="reset-btn"
+        >
+          RESET
+        </button>
+        <button value="=" class="equal-btn grid2span equal" id="equal-btn">
+          =
+        </button>
+      </div>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

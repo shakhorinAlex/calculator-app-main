@@ -37,24 +37,24 @@ The designs were created to the following widths:
 
 #### Backgrounds
 
-- Light gray (main background): hsl(0, 0%, 90%)
-- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Light gray (main background): 
+- Grayish red (toggle background, keypad background): 
 - Very light gray (screen background): hsl(0, 0%, 93%)
 
 #### Keys
 
-- Dark moderate cyan (key background): hsl(185, 42%, 37%)
-- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+- Dark moderate cyan (key background): 
+- Very dark cyan (key shadow): 
 
-- Orange (key background, toggle): hsl(25, 98%, 40%)
-- Dark orange (key shadow): hsl(25, 99%, 27%)
+- Orange (key background, toggle): 
+- Dark orange (key shadow): 
 
-- Light grayish yellow (key background): hsl(45, 7%, 89%)
-- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+- Light grayish yellow (key background): 
+- Dark grayish orange (key shadow): 
 
 #### Text
 
-- Very dark grayish yellow: hsl(60, 10%, 19%)
+- Very dark grayish yellow: 
 - White (text): hsl(0, 0, 100%)
 
 ### Theme 3
