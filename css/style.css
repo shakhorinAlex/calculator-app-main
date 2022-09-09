@@ -206,6 +206,7 @@ label:active:after {
     letter-spacing: 1px;
     border: none;
     text-align: right;
+    cursor: default;
 }
 
 #input-result2 {
