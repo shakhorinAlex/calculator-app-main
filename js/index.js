@@ -60,8 +60,7 @@ function evaluateResult() {
     if (equationValue !== '') {
         let calcResult = eval(equationValue);
         result.value = calcResult;
-    } else {
-        result.value = equationValue;
+        equationValue = calcResult;
     }
     
 }
