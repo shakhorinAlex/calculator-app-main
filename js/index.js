@@ -26,6 +26,7 @@ function themeChange() {
         delButton.id = 'rst2';
         resetBtn.id = 'rst2';
         equalBtn.id = 'equal-btn2';
+        errorMessage.id = 'result-error2'
     } else {
         $("*[style]").removeAttr("style");
         result.removeAttribute('id');
@@ -34,6 +35,7 @@ function themeChange() {
         delButton.removeAttribute('id');
         resetBtn.removeAttribute('id');
         equalBtn.removeAttribute('id');
+        errorMessage.removeAttribute('id');
     }
 }
 
@@ -55,8 +57,13 @@ function addValue() {
 }
 
 function evaluateResult() {
-    let calcResult = eval(equationValue);
-    result.value = calcResult;
+    if (equationValue !== '') {
+        let calcResult = eval(equationValue);
+        result.value = calcResult;
+    } else {
+        result.value = equationValue;
+    }
+    
 }
 
 $(calcButtons).on('click', addValue);
@@ -84,8 +91,20 @@ function reset() {
 $(resetBtn).on('click', reset);
 
 // error //
+
+const errorMessage = document.querySelector('.result-error')
+
 window.onerror = function () {
     equationValue = result.value.slice(0, -1);
     result.value = equationValue;
-    alert("Please write valid equation");
+    errorMessage.classList.add('active');
+
+    setTimeout(() => {
+        if (errorMessage.classList.contains('active')) {
+            errorMessage.classList.remove('active');
+        }
+        
+    }, 3000);
+
+    
 }

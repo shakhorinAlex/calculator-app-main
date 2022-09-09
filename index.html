@@ -27,12 +27,15 @@
               <p class="theme-change-option-text">2</p>
             </div>
             <input type="checkbox" id="theme-change-btn" />
-            <label for="theme-change-btn"></label>
+            <label class="theme-checkbox" for="theme-change-btn"></label>
           </div>
         </div>
       </div>
       <div class="calculator-result">
-        <input type="text" value="" class="input-result" readonly="readonly" />
+        <input type="text" value="" class="input-result" id="result-value" />
+        <label class="result-error" for="result-value" hidden
+          >Please write a valid equation</label
+        >
       </div>
       <div class="calculator-input">
         <button value="7" class="calculator-btn">7</button>
@@ -42,15 +45,15 @@
         <button value="4" class="calculator-btn">4</button>
         <button value="5" class="calculator-btn">5</button>
         <button value="6" class="calculator-btn">6</button>
-        <button value="+" class="calculator-btn calculator-operators">+</button>
+        <button value="+" class="calculator-btn">+</button>
         <button value="1" class="calculator-btn">1</button>
         <button value="2" class="calculator-btn">2</button>
         <button value="3" class="calculator-btn">3</button>
-        <button value="-" class="calculator-btn calculator-operators">-</button>
+        <button value="-" class="calculator-btn">-</button>
         <button value="." class="calculator-btn">.</button>
         <button value="0" class="calculator-btn">0</button>
-        <button value="/" class="calculator-btn calculator-operators">/</button>
-        <button value="*" class="calculator-btn calculator-operators">x</button>
+        <button value="/" class="calculator-btn">/</button>
+        <button value="*" class="calculator-btn">x</button>
         <button
           type="reset"
           value="RESET"

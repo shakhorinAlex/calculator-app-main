@@ -100,13 +100,13 @@ body {
 }
 
 .container {
-    padding: 5%;
+    padding: 16px;
     font-weight: 700;
 }
 
 .container-head {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
@@ -149,7 +149,7 @@ input[type=checkbox] {
     margin: 0;
 }
 
-label {
+.theme-checkbox {
     cursor: pointer;
     text-indent: -9999px;
     width: 3rem;
@@ -165,7 +165,7 @@ label {
     background: var(--bc2-keypad);
 }
 
-label:after {
+.theme-checkbox:after {
     content: '';
     position: absolute;
     top: .25rem;
@@ -177,21 +177,22 @@ label:after {
     transition: 0.3s;
 }
 
-label.second:after {
+.theme-checkbox.second:after {
     background: var(--bc2-keyEqualActive);
 }
 
-input:checked+label:after {
+input:checked+.theme-checkbox:after {
     left: calc(100% - .2rem);
     transform: translateX(-100%);
 }
 
-label:active:after {
+.theme-checkbox:active:after {
     width: 2.2rem;
 }
 
 .calculator-result {
     margin-bottom: 2rem;
+    position: relative;
 }
 
 
@@ -207,6 +208,30 @@ label:active:after {
     border: none;
     text-align: right;
     cursor: default;
+}
+
+.result-error {
+    transition: all .7s ease-in-out;
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 5px 15px;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
+    border-radius: 3px;
+    background-color: var(--bc1-keyEqualActive);
+}
+
+.active {
+    opacity: 1;
+}
+
+#result-error2 {
+    background-color: var(--bc2-keyEqualActive);
 }
 
 #input-result2 {
@@ -232,7 +257,7 @@ label:active:after {
     color: black;
 }
 
-.calculator-btn, .calculator-operators {
+.calculator-btn {
     background-color: var(--bc1-keyBackground);
     box-shadow: 0px 4px 0px var(--bc1-keyShadow);
     border: none;
@@ -253,8 +278,8 @@ label:active:after {
     color: var(--bc2-keyButtonsShadow);
 }
 
-.calculator-btn:active {
-    filter: brightness(125%);
+.calculator-btn:active, .rst:active, .equal-btn:active {
+    filter: brightness(120%);
 }
 
 .rst {
@@ -304,4 +329,34 @@ label:active:after {
 
 .grid2span {
     grid-column-start: span 2;
+}
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        width: 572px;
+        margin: 1rem 0;
+    }
+    .input-result {
+        font-size: 40px;
+        padding: 1.75rem 1.5rem;
+    }
+    .calculator-input {
+        gap: 22px 22px;
+
+    }
+    .calculator-btn {
+        font-size: 36px;
+        height: 60px;
+    }
+    .rst {
+        font-size: 26px;
+    }
+    .equal-btn {
+        font-size: 24px;
+    }
+
+    .result-error {
+        font-size: 12px;
+    }
 }
