@@ -87,7 +87,7 @@ fieldset {
     --bc2-keyShadow: hsl(35, 11%, 61%);
     --bc2-keyText: hsl(60, 10%, 19%);
     touch-action: pan-x pan-y;
-    height: 100%
+    height: 100%;
 }
 
 body {
